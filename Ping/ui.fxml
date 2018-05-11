@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.beans.property.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.Color?>
+
+
+
+   
+
+<VBox spacing="10"  prefWidth="1000" prefHeight="600" fx:controller="Ping.Controller" xmlns:fx="http://javafx.com/fxml">
+    <fx:define>
+        <Font fx:id="FONT" size="18" />
+    </fx:define>
+    <StackPane >
+    <MenuBar fx:id="menuBar" >
+      <menus>
+         <Menu text="Funkciók">
+            <items>
+               <MenuItem text="Teszt" fx:id="tesztmenu" />
+               <MenuItem text="Lekérdezések"/>
+               <SeparatorMenuItem  />
+               <MenuItem text="Exit"/>
+            </items>
+         </Menu>
+         
+      </menus>
+   </MenuBar>
+   </StackPane>
+    
+
+    <HBox spacing="1" alignment="CENTER">
+        <Button text="Ping" prefWidth="100" font="$FONT" onAction="#processNumpad" />
+        <TextField fx:id="ip1" promptText="0-255"
+               prefWidth="70"/>
+        <Label text="."/>   
+        <TextField fx:id="ip2" promptText="0-255"
+               prefWidth="70"/>
+        <Label text="."/>
+        <TextField fx:id="ip3" promptText="0-255"
+               prefWidth="70"/>
+        <Label text="."/>   
+        <TextField fx:id="ip4" promptText="0-255"
+               prefWidth="70"/>
+        <Button text="TraceRoute" prefWidth="200" font="$FONT" onAction="#processNumpad" />
+    </HBox>
+    <HBox spacing="1" alignment="CENTER">  
+    
+     </HBox>   
+     <StackPane alignment="CENTER" prefWidth="600">
+        <Text fx:id="ipAddress" font="$FONT" />
+    </StackPane>
+    <HBox></HBox>
+    <HBox></HBox>
+    <HBox>
+    <Button text="Lekérdezés" prefWidth="100" onAction="#processOperator" />
+        <Button text="TáblaTörlés" prefWidth="100" onAction="#processDrop" />
+    </HBox>
+    
+</VBox>
